@@ -1,0 +1,18 @@
+
+
+    "In 100 words, what is the main point of this article? Do not start off by saying, "The article"."
+
+
+
+
+    "From the article, please list notable named entities as well as important events that one would do well to be
+familiar with. Please list them in bullet points without introduction."
+
+    "In 100 words, what does the article have to say about ____? Do not begin by talking about "the article"."
+
+
+
+
+Keep a list of all notable events and entities -- Every year, cluster and summarize what was learned.
+Then dream.
+
