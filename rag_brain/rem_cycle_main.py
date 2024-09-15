@@ -2,9 +2,10 @@ from rag_brain import chroma_db
 from preprocess import FA_data
 
 
-def main():
-    db = chroma_db.Store()
+print("db = load_db_main()")
 
+def load_db_main():
+    db = chroma_db.Store()
     if db.count == 0:
         print("Found empty db, getting data...")
         input("Hit enter for okay")
@@ -16,3 +17,8 @@ def main():
     else:
         print(f"Found old database with {db.count} items.")
         input("Hit enter for okay")
+    return db
+
+
+
+

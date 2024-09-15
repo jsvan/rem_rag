@@ -5,8 +5,10 @@
 
 
 
-    "From the article, please list notable named entities as well as important events that one would do well to be
-familiar with. Please list them in bullet points without introduction."
+    "From the article, please list important named entities and topics, as well as important events that one would do
+    well to be familiar with. Please list them in bullet points without introduction. Only include items which are
+    important for understanding the broader trends in the world, and which are likely to appear in other articles from
+    different sources. Do not explain why you chose each item."
 
     "In 100 words, what does the article have to say about ____? Do not begin by talking about "the article"."
 
@@ -16,3 +18,6 @@ familiar with. Please list them in bullet points without introduction."
 Keep a list of all notable events and entities -- Every year, cluster and summarize what was learned.
 Then dream.
 
+
+
+If a query's distance is larger than 70%, then dismiss it.

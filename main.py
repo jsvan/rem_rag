@@ -5,6 +5,7 @@
 
 from preprocess.chunker import Chunk
 import pickle
+import utils
 
 
 def read_fa():
@@ -28,6 +29,10 @@ def foreign_affairs():
         break
 
 
+def db_test():
+    from rag_brain import rem_cycle_main
+    return rem_cycle_main.load_db_main()
+
 if __name__ == '__main__':
-    foreign_affairs()
+    db = db_test()
 

@@ -13,7 +13,7 @@ Interfaces with OpenAI's LLM for text generation
 
 """
 class LLM:
-    def __init__(self, model="gpt-4o-mini", quantization=None, matroshka=None, similarity="dot"):
+    def __init__(self, model="gpt-4o-mini"):
         with open("../data/openai_key.txt") as F:
             self.key = F.read().strip()
         self.model = model

@@ -77,17 +77,17 @@ actually more, because it would include the 1% of previous dreamings too.
 class Store:
 
     def __init__(self, name="chroma_db_1"):
-        with open("../data/openai_key.txt") as f:
+        with open("./data/openai_key.txt") as f:
             apikey = f.read().strip()
         openai_ef = embedding_functions.OpenAIEmbeddingFunction(
             api_key=apikey,
             model_name="text-embedding-3-small"
         )
 
-        self.chroma_client = chromadb.PersistentClient(path="../data")
+        self.chroma_client = chromadb.PersistentClient(path="./data")
         self.collection = self.chroma_client.get_or_create_collection(name=name,
                                                                       embedding_function=openai_ef,
-                                                                      metadata={"hnsw:space": "ip"})
+                                                                      metadata={"hnsw:space": "cosine"})
         self.count = self.collection.count()
 
 
@@ -148,7 +148,7 @@ class Store:
 
 
     def read(self, data):
-        ids = [str(x) for x in range(len(data['chunk']))]
+        ids = [str(x) for x in range(self.count, self.count + len(data['chunk']))]
         documents = data['chunk']
         embeddings = data['embedding']
         jump = 1000
@@ -158,3 +158,5 @@ class Store:
                 documents=documents[i:i + jump],
                 embeddings=embeddings[i:i + jump],
             )
+        self.count = self.collection.count()
+
